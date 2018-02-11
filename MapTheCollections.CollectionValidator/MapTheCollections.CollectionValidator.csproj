@@ -158,7 +158,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\app\csv-manager.js" />
     <Content Include="Scripts\app\manual-input.js" />
-    <Content Include="Scripts\app\validator.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
