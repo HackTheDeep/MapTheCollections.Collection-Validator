@@ -34,6 +34,7 @@ namespace MapTheCollections.CollectionValidator {
 
             bundles.Add(new ScriptBundle("~/bundles/jsgrid").Include(
                 "~/Scripts/plugins/jsgrid/jsgrid.min.js"));
+<<<<<<< HEAD
 
 
             bundles.Add(new ScriptBundle("~/bundles/plugins").Include(
@@ -41,6 +42,8 @@ namespace MapTheCollections.CollectionValidator {
                 "~/Scripts/plugins/jquery-ui.min.js",
                 "~/Scripts/plugins/moment.js"));
 
+=======
+>>>>>>> e41045d79c3db166ea7ff6510fc55e5e9631c38a
 
         }
     }

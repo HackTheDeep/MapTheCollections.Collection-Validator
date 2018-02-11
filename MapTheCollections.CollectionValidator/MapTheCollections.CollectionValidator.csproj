@@ -175,12 +175,18 @@
     <Content Include="Content\plugins\jsgrid-theme.css" />
     <Content Include="Content\plugins\jsgrid-theme.min.css" />
     <Content Include="Content\plugins\jsgrid.css" />
+<<<<<<< HEAD
     <Content Include="Scripts\plugins\bootstrap-datepicker.js" />
     <Content Include="Scripts\plugins\jquery-ui.min.js" />
     <Content Include="Scripts\plugins\jsgrid\jsgrid.js" />
     <Content Include="Content\plugins\jsgrid.min.css" />
     <Content Include="Scripts\plugins\jsgrid\jsgrid.min.js" />
     <Content Include="Scripts\plugins\moment.js" />
+=======
+    <Content Include="Scripts\plugins\jsgrid\jsgrid.js" />
+    <Content Include="Content\plugins\jsgrid.min.css" />
+    <Content Include="Scripts\plugins\jsgrid\jsgrid.min.js" />
+>>>>>>> e41045d79c3db166ea7ff6510fc55e5e9631c38a
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Web.config" />

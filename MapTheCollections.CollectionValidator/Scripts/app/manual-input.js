@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
 
+<<<<<<< HEAD
     var MyLocationField = function (config) {
         jsGrid.Field.call(this, config);
     };
@@ -119,6 +120,8 @@
     ];
 
 
+=======
+>>>>>>> e41045d79c3db166ea7ff6510fc55e5e9631c38a
     //var clients = [
     //    { "Name": "Otto Clay", "Age": 25, "Country": 1, "Address": "Ap #897-1459 Quam Avenue", "Married": false },
     //    { "Name": "Connor Johnston", "Age": 45, "Country": 2, "Address": "Ap #370-4647 Dis Av.", "Married": true },
@@ -164,12 +167,20 @@
         editing: true,
         sorting: true,
         paging: true,
+<<<<<<< HEAD
          
         //data: exampleData,
 
         fields: [   
 
             { name: "Locality Bay/ Sound/ Harbor", type: "location" },
+=======
+
+        //data: exampleData,
+
+        fields: [
+            { name: "Locality Bay/ Sound/ Harbor", type: "text" },
+>>>>>>> e41045d79c3db166ea7ff6510fc55e5e9631c38a
             { name: "Locality Continent", type: "text" },
             { name: "Locality Country ", type: "text" },
             { name: "Locality Dept/ Province/ State", type: "text" },
@@ -180,7 +191,11 @@
             { name: "Locality Latitude", type: "number" },
             { name: "Locality Longitude", type: "number" },
             { name: "Locality Notes", type: "text" },
+<<<<<<< HEAD
             { name: "Locality  ", type: "text" },
+=======
+            { name: "Locality Ocean", type: "text" },
+>>>>>>> e41045d79c3db166ea7ff6510fc55e5e9631c38a
             { name: "Locality Precise Location", type: "text" },
             { name: "Locality River", type: "text" },
             { name: "Locality Sea/ Gulf", type: "text" },
@@ -212,7 +227,10 @@
     });
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e41045d79c3db166ea7ff6510fc55e5e9631c38a
     $('button#export-csv').click(function (evt) {
         evt.target.disabled = true;
 
