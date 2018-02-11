@@ -4,13 +4,20 @@
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<div id="jsGrid"></div>
+<div class="row">
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary btn-block" id="export-csv">Export csv</button>
+    </div>
+</div>
+
+<div class="row">
+    <div id="jsGrid"></div>
+</div>
 
 
 @section Scripts {
 
     @Scripts.Render("~/bundles/jsgrid")
     @Scripts.Render("~/bundles/app")
-
 
 }
