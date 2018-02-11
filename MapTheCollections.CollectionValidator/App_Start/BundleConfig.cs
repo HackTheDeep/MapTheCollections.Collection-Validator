@@ -35,6 +35,13 @@ namespace MapTheCollections.CollectionValidator {
             bundles.Add(new ScriptBundle("~/bundles/jsgrid").Include(
                 "~/Scripts/plugins/jsgrid/jsgrid.min.js"));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/plugins").Include(
+                "~/Scripts/plugins/boostrap-datepicker.js",
+                "~/Scripts/plugins/jquery-ui.min.js",
+                "~/Scripts/plugins/moment.js"));
+
+
         }
     }
 }

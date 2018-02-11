@@ -60,7 +60,7 @@
             { name: "Locality Latitude", type: "number" },
             { name: "Locality Longitude", type: "number" },
             { name: "Locality Notes", type: "text" },
-            { name: "Locality Ocean", type: "text" },
+            { name: "Locality  ", type: "text" },
             { name: "Locality Precise Location", type: "text" },
             { name: "Locality River", type: "text" },
             { name: "Locality Sea/ Gulf", type: "text" },
