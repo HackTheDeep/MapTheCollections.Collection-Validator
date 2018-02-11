@@ -1,5 +1,16 @@
 ﻿@{
-    ViewBag.Title = "Manual Input";
+    ViewBag.Title = "Add data";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
+
+<div id="jsGrid"></div>
+
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jsgrid")
+    @Scripts.Render("~/bundles/app")
+
+
+}
