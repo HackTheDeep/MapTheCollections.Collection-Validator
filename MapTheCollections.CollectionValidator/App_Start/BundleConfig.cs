@@ -22,11 +22,18 @@ namespace MapTheCollections.CollectionValidator {
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/plugins/jsgrid.min.css",
+                      "~/Content/plugins/jsgrid-theme.min.css",
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                     "~/Scripts/app/csv-manager.js",
-                    "~/Scripts/app/validator.js"));
+                    "~/Scripts/app/validator.js",
+                    "~/Scripts/app/manual-input.js"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/jsgrid").Include(
+                "~/Scripts/plugins/jsgrid/jsgrid.min.js"));
 
         }
     }
