@@ -67,8 +67,8 @@
     
         MyDateField.prototype = new jsGrid.Field({
     
-            css: "date-field",            // redefine general property 'css'
-            align: "center",              // redefine general property 'align'
+            css: "ui-datepicker",            // redefine general property 'css'
+            //align: "center",              // redefine general property 'align'
     
             myCustomProperty: "foo",      // custom property
     
@@ -77,10 +77,7 @@
             },
     
             itemTemplate: function (value) {
-                //       var moment = require('moment');
-                // moment().format();
-                // console.log(value, moment(value, "YYYY-MMMM-D"));
-    
+
                 return new Date(value).toDateString();
             },
     
@@ -156,8 +153,8 @@
         //});
     
         $("#jsGrid").jsGrid({
-            width: "100%",
-            height: "400px",
+            width: "auto",
+            height: "auto",
     
     
             inserting: true,
@@ -167,7 +164,7 @@
 
             fields: [
 
-                { name: "Locality Continent", type: "text" },
+                { name: "Locality Continent", type: "select", items: continents, valueField: "Id", textField: "Name" },
                 { name: "Locality Country ", type: "location" },
                 { name: "Locality Dept/ Province/ State", type: "location" },
 
@@ -191,8 +188,8 @@
                 { name: "Locality Stream", type: "text" },
                 { name: "Locality Township", type: "text" },
                 { name: "Locality Verbatim", type: "text" },
-                { name: "Location CollectedDate from", type: "date" },
-                { name: "Location CollectedDate to", type: "date" },
+                { name: "Location CollectedDate from", type: "text" },
+                { name: "Location CollectedDate to", type: "text" },
                 { name: "Location Collection", type: "text" },
                 { name: "Location Depth end (m)", type: "number" },
                 { name: "Location Depth start (m)", type: "number" },
@@ -205,7 +202,7 @@
                 { name: "TaxName Species", type: "text" },
                 { name: "TaxName Subspecies", type: "text" },
                 { name: "Taxonomy Number of Specimens", type: "text" },
-                { name: "Tracking Number", type: "number" },
+                { name: "Tracking Number", type: "text" },
                 { name: "Tracking CatNumber", type: "number" },
                 { name: "Tracking CatPrefix", type: "text" },
                 { name: "Tracking CatSuffix", type: "text" },
@@ -213,6 +210,10 @@
     
     
             ]
+        });
+
+        $('button#add').click(function () {
+            $('#jsGrid').jsGrid({ inserting: true });
         });
     
         $('button#export-csv').click(function (evt) {

@@ -22,6 +22,7 @@ namespace MapTheCollections.CollectionValidator {
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/plugins/datepicker3.css",
                       "~/Content/plugins/jsgrid.min.css",
                       "~/Content/plugins/jsgrid-theme.min.css",
                       "~/Content/site.css"));
