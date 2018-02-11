@@ -166,20 +166,22 @@
             paging: true,
 
             fields: [
-                { name: "Locality Bay/ Sound/ Harbor", type: "location" },
 
                 { name: "Locality Continent", type: "text" },
-                { name: "Locality Country ", type: "text" },
-                { name: "Locality Dept/ Province/ State", type: "text" },
-                { name: "Locality IRN", type: "number" },
+                { name: "Locality Country ", type: "location" },
+                { name: "Locality Dept/ Province/ State", type: "location" },
+
                 { name: "Locality Island", type: "text" },
                 { name: "Locality Island/ Group", type: "text" },
-                { name: "Locality Lake/ Pond/ Resevoir", type: "text" },
+                { name: "Locality Lake/ Pond/ Resevoir", type: "location" },
+                { name: "Locality Bay/ Sound/ Harbor", type: "location" },
+
                 { name: "Locality Latitude", type: "number" },
                 { name: "Locality Longitude", type: "number" },
+
+                { name: "Locality IRN", type: "number" },
                 { name: "Locality Notes", type: "text" },
 
-                { name: "Locality  ", type: "text" },
 
                 { name: "Locality Ocean", type: "text" },
 
@@ -189,8 +191,8 @@
                 { name: "Locality Stream", type: "text" },
                 { name: "Locality Township", type: "text" },
                 { name: "Locality Verbatim", type: "text" },
-                { name: "Location CollectedDate from", type: "text" },
-                { name: "Location CollectedDate to", type: "text" },
+                { name: "Location CollectedDate from", type: "date" },
+                { name: "Location CollectedDate to", type: "date" },
                 { name: "Location Collection", type: "text" },
                 { name: "Location Depth end (m)", type: "number" },
                 { name: "Location Depth start (m)", type: "number" },
@@ -218,9 +220,13 @@
     
             var data = $("#jsGrid").jsGrid("option", "data");
             var JSONdata = JSON.stringify(data);
+
+
             var fileName = "Collections export_" + new Date();
     
-            JSONToCSVConvertor(JSONdata, fileName,true);
+            JSONToCSVConvertor(JSONdata, fileName, true);
+
+
     
             evt.target.disabled = false;
         });

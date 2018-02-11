@@ -8,7 +8,7 @@ namespace MapTheCollections.CollectionValidator.Controllers {
     public class HomeController : Controller {
 
         public ActionResult Index() {
-            return View();
+            return RedirectToLocal("/Home/ManualInput");
         }
 
         public ActionResult CSVUpload() {
@@ -16,9 +16,18 @@ namespace MapTheCollections.CollectionValidator.Controllers {
         }
 
         public ActionResult ManualInput() {
-            ViewBag.Message = "Your manual input page.";
 
             return View();
         }
+
+        private ActionResult RedirectToLocal(string returnUrl) {
+            if (Url.IsLocalUrl(returnUrl)) {
+                return Redirect(returnUrl);
+            }
+            else {
+                return RedirectToAction("Index","Home");
+            }
+        }
+
     }
 }
