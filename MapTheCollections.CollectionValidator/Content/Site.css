@@ -22,3 +22,13 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.jsgrid-grid-header,
+.jsgrid-grid-body {
+    overflow: auto;
+}
+
+.row {
+    margin-top: 20px;
+}
