@@ -40,12 +40,16 @@
         width: "100%",
         height: "400px",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Added jsgrid
         inserting: true,
         editing: true,
         sorting: true,
         paging: true,
 
+<<<<<<< HEAD
         //data: exampleData,
 
         fields: [
@@ -177,4 +181,58 @@
         document.body.removeChild(link);
     }
 
+=======
+        fields: [
+            { name: "Locality_BaySoundHarbor", type: "text" },
+            { name: "Locality_Continent", type: "text" },
+            { name: "Locality_Country ", type: "text" },
+            { name: "Locality_DeptProvinceState", type: "text" },
+            { name: "Locality_IRN", type: "number" },
+            { name: "Locality_Island", type: "text" },
+            { name: "Locality_IslandGroup", type: "text" },
+            { name: "Locality_Lake/Pond/Resevoir", type: "text" },
+            { name: "Locality_Latitude", type: "number" },
+            { name: "Locality_Longitude", type: "number" },
+            { name: "Locality_Notes", type: "text" },
+            { name: "Locality_Ocean", type: "text" },
+            { name: "Locality_Precise Location", type: "text" },
+            { name: "Locality_River", type: "text" },
+            { name: "Locality_SeaGulf", type: "text" },
+            { name: "Locality_Stream", type: "text" },
+            { name: "Locality_Township", type: "text" },
+            { name: "Locality_Verbatim", type: "text" },
+            { name: "Location_Collected Day from", type: "-" },
+            { name: "Location_Collected Day to", type: "-" },
+            { name: "Location_Collected Month from", type: "-" },
+            { name: "Location_Collected Monthto", type: "-" },
+            { name: "Location_Collected Year from", type: "-" },
+            { name: "Location_Collected Year to", type: "-" },
+            { name: "Location_CollectedDate from", type: "date" },
+            { name: "Location_CollectedDate to", type: "date" },
+            { name: "Location_Collection", type: "text" },
+            { name: "Location_Depth end (m)", type: "number" },
+            { name: "Location_Depth start (m)", type: "number" },
+            { name: "Location_Elevation from (m)", type: "number" },
+            { name: "Location_Elevation to (m)", type: "number" },
+            { name: "Location_Elevation verbatim", type: "text" },
+            { name: "Tax_Group (yellow - fill in)", type: "text" },
+            { name: "TaxName_Family", type: "text" },
+            { name: "TaxName_Genus", type: "text" },
+            { name: "TaxName_Order", type: "text" },
+            { name: "TaxName_Species", type: "text" },
+            { name: "TaxName_Subspecies", type: "text" },
+            { name: "Taxonomy_Number of Specimens", type: "text" },
+            { name: "Tracking Number", type: "number" },
+            { name: "Tracking_CatNumber", type: "number" },
+            { name: "Tracking_CatPrefix", type: "text" },
+            { name: "Tracking_CatSuffix", type: "text" },
+
+
+            { type: "control" }
+
+
+        ]
+    });
+
+>>>>>>> Added jsgrid
 });
