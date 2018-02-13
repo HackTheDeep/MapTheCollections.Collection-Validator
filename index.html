@@ -1,10 +1,71 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMNH Collection Validator</title>
+
+    <link rel="stylesheet" href="./libs/jsgrid-theme.min.css">
+    <link rel="stylesheet" href="libs/jsgrid.min.css">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
 <body>
+<!--<div class="navbar navbar-dark bg-dark navbar-inverse navbar-fixed-top">-->
+    <!--<div class="container">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<h1 class="navbar-brand">Collection Validator</h1>-->
+            <!--&lt;!&ndash;@Html.ActionLink("Collection Validator", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="navbar-collapse collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--&lt;!&ndash;<li>@Html.ActionLink("CSV Upload", "CSVUpload", "Home")</li>&ndash;&gt;-->
+                <!--<li>CSVUpload</li>-->
+                <!--&lt;!&ndash;<li>@Html.ActionLink("Manual Input", "ManualInput", "Home")</li>&ndash;&gt;-->
+                <!--<li>Home</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
-<h1>Hello World</h1>
+<div class="container body-content">
 
-<script src="./manual-input.js"></script>
+    <h2>Collection Validator</h2>
+    <h5>Input collection data and export to CSV.</h5>
+
+    <div class="row">
+        <div class="col-md-3">
+            <button type="button" class="btn btn-secondary btn-block" id="add">Add</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-primary btn-block" id="export-csv">Export csv</button>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div id="jsGrid"></div>
+    </div>
+
+    <div class="container body-content">
+        <!--@RenderBody()-->
+        <hr />
+        <footer>
+            <p>&copy; Hack The Deep - Map the Collections</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="./libs/google-places.js"></script>
+    <script type="text/javascript" src="./libs/jquery.min.js"></script>
+    <script type="text/javascript" src="./libs/jsgrid.min.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="./manual-input.js"></script>
 
 </body>
 </html>
