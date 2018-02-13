@@ -1,11 +1,11 @@
-﻿console.log("Hello darling dearest love...")﻿
+﻿console.log("Hello Human...")﻿
+
 $(document).ready(function () {
 
         var MyLocationField = function (config) {
             jsGrid.Field.call(this, config);
         };
-    
-    
+
         MyLocationField.prototype = new jsGrid.Field({
     
             css: "date-field",            // redefine general property 'css'
@@ -115,8 +115,7 @@ $(document).ready(function () {
             { Name: "Oceania", Id: 5 },
             { Name: "South America", Id: 6 }
         ];
-    
-
+        
         //var clients = [
         //    { "Name": "Otto Clay", "Age": 25, "Country": 1, "Address": "Ap #897-1459 Quam Avenue", "Married": false },
         //    { "Name": "Connor Johnston", "Age": 45, "Country": 2, "Address": "Ap #370-4647 Dis Av.", "Married": true },
@@ -162,11 +161,22 @@ $(document).ready(function () {
             editing: true,
             sorting: true,
             paging: true,
+            pageSize: 100,
+
+            // onItemInserting: function(args) {
+                //TODO Ask Chris what fields will be required
+                // console.log(args, args.item);
+                // if(!args.item.name) {
+                //     args.cancel = true;
+                //     alert("Specify the name of the item!");
+                // }
+            // },
 
             fields: [
+                { type: "control", css: "enter-btn" },
 
                 { name: "Locality Continent", type: "select", items: continents, valueField: "Id", textField: "Name" },
-                { name: "Locality Country ", type: "location" },
+                { name: "Locality Country", type: "location" },
                 { name: "Locality Dept/ Province/ State", type: "location" },
 
                 { name: "Locality Island", type: "text" },
@@ -179,7 +189,6 @@ $(document).ready(function () {
 
                 { name: "Locality IRN", type: "number" },
                 { name: "Locality Notes", type: "text" },
-
 
                 { name: "Locality Ocean", type: "text" },
 
@@ -207,30 +216,35 @@ $(document).ready(function () {
                 { name: "Tracking CatNumber", type: "number" },
                 { name: "Tracking CatPrefix", type: "text" },
                 { name: "Tracking CatSuffix", type: "text" },
-                { type: "control" }
-    
+
     
             ]
         });
+    // Start showing initial item
+    //$('#jsGrid').jsGrid("insertItem");
 
-        $('button#add').click(function () {
-            $('#jsGrid').jsGrid({ inserting: true });
+
+    $('button#add').click(function () {
+            $('#jsGrid').jsGrid("insertItem");
         });
     
         $('button#export-csv').click(function (evt) {
             evt.target.disabled = true;
-    
+
             var data = $("#jsGrid").jsGrid("option", "data");
             var JSONdata = JSON.stringify(data);
 
 
             var fileName = "Collections export_" + new Date();
-    
+
             JSONToCSVConvertor(JSONdata, fileName, true);
 
 
-    
+
             evt.target.disabled = false;
+
+            // TODO: Use exportData instead
+            // var csv = $("#grid").jsGrid("exportData");
         });
     
         function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
